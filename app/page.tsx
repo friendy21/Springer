@@ -360,38 +360,38 @@ export default function Home() {
       <section className="py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0 dot-pattern opacity-[0.15] pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="reveal-left">
               <div className="flex items-center gap-3 mb-10">
                 <span className="w-10 h-px bg-brand-green" />
                 <span className="section-label">Leadership</span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold font-serif text-zinc-900 mb-6 tracking-tight" style={{ lineHeight: '1.08' }}>
+              <h2 className="text-4xl lg:text-[3.5rem] font-bold font-serif text-zinc-900 mb-6 tracking-tight" style={{ lineHeight: '1.08' }}>
                 Meet Our<br /><span className="text-brand-green">Management</span>
               </h2>
-              <p className="text-zinc-600 text-base leading-relaxed mb-8 max-w-sm">
+              <p className="text-zinc-600 text-[17px] leading-[1.8] mb-10 max-w-sm">
                 Springer Capital delivers ideas and solutions that make organizations better. Our leadership team brings decades of cross-market expertise.
               </p>
-              <Link href="/team" className="btn-outline group text-sm px-7 py-3.5 inline-flex self-start">
+              <Link href="/team" className="btn-outline group text-[15px] px-8 py-4 inline-flex self-start">
                 Full Bios
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            <div className="reveal-right">
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 w-full max-w-[500px] ml-auto">
+            <div className="reveal-right flex justify-start lg:-ml-6">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full max-w-[650px]">
                 {[
                   { name: 'Patrick Kelly',   title: 'Investments Director', img: '/images/patrick2.png',  offset: '' },
-                  { name: 'Isaac Rosenthal', title: 'Operations Director',  img: '/images/isaac2.png',    offset: 'sm:mt-8' },
+                  { name: 'Isaac Rosenthal', title: 'Operations Director',  img: '/images/isaac2.png',    offset: 'sm:mt-16' },
                 ].map((m) => (
                   <Link href="/team" key={m.name} className={`group flex-1 ${m.offset}`}>
-                    <div className="relative overflow-hidden rounded-3xl aspect-[4/5] bg-zinc-100 shadow-[0_16px_48px_rgba(0,0,0,0.12)] group-hover:shadow-[0_24px_64px_rgba(42,140,45,0.18)] transition-all duration-500 ring-2 ring-brand-green/0 group-hover:ring-brand-green/40 ring-offset-4 ring-offset-white">
+                    <div className="relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-zinc-100 shadow-[0_24px_50px_rgba(0,0,0,0.08)] border-[6px] md:border-[10px] border-white hover:border-transparent ring-2 ring-transparent ring-offset-0 group-hover:shadow-[0_32px_80px_rgba(42,140,45,0.15)] transition-all duration-500">
                       <img src={m.img} alt={m.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                         <div className="translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                          <p className="text-white font-bold text-[13px] tracking-wide">{m.name}</p>
-                          <p className="text-brand-green text-[9px] font-bold uppercase tracking-widest mt-1">{m.title}</p>
+                          <p className="text-white font-bold text-base md:text-lg tracking-wide">{m.name}</p>
+                          <p className="text-brand-green text-[10px] md:text-[11px] font-bold uppercase tracking-widest mt-1.5">{m.title}</p>
                         </div>
                       </div>
                     </div>
