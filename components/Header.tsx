@@ -23,11 +23,22 @@ export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled]           = useState(false);
   const pathname                           = usePathname();
+  const navRef                             = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
@@ -55,16 +66,29 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav ref={navRef} className="hidden md:flex items-center gap-1">
             <Link href="/" className={`nav-link px-3 py-2 text-[12px] tracking-[0.06em] uppercase font-semibold transition-colors ${isActive('/') ? 'text-brand-green' : 'text-zinc-600 hover:text-brand-green'}`}>
               Home
             </Link>
 
             {/* About dropdown */}
-            <DropdownMenu label="About" items={ABOUT_LINKS} pathname={pathname} />
+            <DropdownMenu 
+              label="About" 
+              items={ABOUT_LINKS} 
+              pathname={pathname} 
+              isOpen={activeDropdown === 'about'}
+              onToggle={() => setActiveDropdown(v => v === 'about' ? null : 'about')}
+            />
 
             {/* Products dropdown */}
-            <DropdownMenu label="Products" items={PRODUCT_LINKS} pathname={pathname} wide />
+            <DropdownMenu 
+              label="Products" 
+              items={PRODUCT_LINKS} 
+              pathname={pathname} 
+              wide 
+              isOpen={activeDropdown === 'products'}
+              onToggle={() => setActiveDropdown(v => v === 'products' ? null : 'products')}
+            />
 
             <Link href="/career" className={`nav-link px-3 py-2 text-[12px] tracking-[0.06em] uppercase font-semibold transition-colors ${isActive('/career') ? 'text-brand-green' : 'text-zinc-600 hover:text-brand-green'}`}>
               Careers
@@ -118,22 +142,27 @@ export default function Header() {
 }
 
 /* ─── Desktop dropdown ─── */
-function DropdownMenu({ label, items, pathname, wide = false }: {
+function DropdownMenu({ label, items, pathname, wide = false, isOpen, onToggle }: {
   label: string;
   items: { href: string; label: string }[];
   pathname: string;
   wide?: boolean;
+  isOpen: boolean;
+  onToggle: () => void;
 }) {
   return (
-    <div className="relative group">
-      <button className="nav-link flex items-center gap-1 px-3 py-2 text-[12px] tracking-[0.06em] uppercase font-semibold text-zinc-600 hover:text-brand-green transition-colors cursor-pointer">
+    <div className="relative">
+      <button 
+        onClick={onToggle}
+        className="nav-link flex items-center gap-1 px-3 py-2 text-[12px] tracking-[0.06em] uppercase font-semibold text-zinc-600 hover:text-brand-green transition-colors cursor-pointer"
+      >
         {label}
-        <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
+        <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Dropdown panel */}
       <div
-        className="absolute top-full left-0 mt-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-200 ease-out"
+        className={`absolute top-full left-0 mt-2 transition-all duration-200 ease-out ${isOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none translate-y-1'}`}
         style={{ width: wide ? 240 : 200 }}
       >
         <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-[0_24px_64px_rgba(0,0,0,0.18)] border border-zinc-100 overflow-hidden">
