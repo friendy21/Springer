@@ -92,11 +92,11 @@ export default function Home() {
       <div id="top" />
 
       {/* ═══════ HERO ═══════ */}
-      <section ref={heroRef} className="relative h-screen min-h-[680px] max-h-[1100px] flex flex-col justify-end overflow-hidden bg-zinc-950">
+      <section ref={heroRef} className="relative h-screen min-h-[680px] max-h-[1100px] flex flex-col justify-center overflow-hidden bg-zinc-950">
         <div className="absolute inset-0 z-0">
           <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('/images/sh.png')" }} />
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/55 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent text-center" />
         </div>
         <div className="absolute inset-0 z-[1] grid-pattern opacity-[0.035] pointer-events-none" />
 
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-0 w-px h-16 bg-brand-green" />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
           <div className="hero-text-reveal mb-6">
             <span className="inline-flex items-center gap-2.5 border-l-4 border-brand-green bg-black/40 backdrop-blur-sm px-4 py-1.5 rounded-none shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
               <span className="relative flex h-2 w-2">
@@ -127,11 +127,11 @@ export default function Home() {
             <span className="text-brand-green" style={{ WebkitTextStroke: '1px rgba(42,140,45,0.4)' }}>Investors.</span>
           </h1>
 
-          <p className="hero-text-reveal-3 text-zinc-200/70 font-light leading-relaxed mb-10 max-w-sm" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.2rem)' }}>
+          <p className="hero-text-reveal-3 text-zinc-200/70 font-light leading-relaxed mb-10 max-w-sm mx-auto" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.2rem)' }}>
             Trusted advisors to business owners and senior executives across global real estate markets.
           </p>
 
-          <div className="hero-text-reveal-4 flex flex-wrap items-center gap-6">
+          <div className="hero-text-reveal-4 flex flex-wrap justify-center items-center gap-6">
             <Link href="/about" className="group flex items-center bg-zinc-100 hover:bg-white text-zinc-900 rounded-full pl-6 pr-2 py-2 transition-all shadow-[0_4px_24px_rgba(42,140,45,0.2)] hover:shadow-[0_8px_32px_rgba(42,140,45,0.3)]">
               <span className="text-[12px] uppercase tracking-[0.06em] font-bold mr-4">Read more</span>
               <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -147,17 +147,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-
-        <button
-          onClick={scrollDown}
-          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-zinc-500 hover:text-brand-green transition-colors group"
-          aria-label="Scroll down"
-        >
-          <span className="text-[9px] font-bold uppercase tracking-[0.22em] mb-1">Scroll</span>
-          <div className="w-[1px] h-12 bg-zinc-800 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full bg-brand-green origin-top animate-[scaleY_2s_ease-in-out_infinite]" />
-          </div>
-        </button>
 
         <div className="absolute bottom-8 right-6 z-10 hidden md:flex flex-col items-end gap-3 border-r border-zinc-800 pr-5">
           {['North America', 'Shanghai', 'Hong Kong'].map((loc, i) => (
