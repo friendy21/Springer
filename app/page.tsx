@@ -372,25 +372,26 @@ export default function Home() {
               <p className="text-zinc-600 text-base leading-relaxed mb-8 max-w-sm">
                 Springer Capital delivers ideas and solutions that make organizations better. Our leadership team brings decades of cross-market expertise.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 w-full mb-6">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 max-w-[420px] mb-8">
                 {[
                   { name: 'Patrick Kelly',   title: 'Investments Director', img: '/images/patrick2.png',  offset: '' },
-                  { name: 'Isaac Rosenthal', title: 'Operations Director',  img: '/images/isaac2.png',    offset: 'sm:mt-10' },
+                  { name: 'Isaac Rosenthal', title: 'Operations Director',  img: '/images/isaac2.png',    offset: 'sm:mt-8' },
                 ].map((m) => (
                   <Link href="/team" key={m.name} className={`group flex-1 ${m.offset}`}>
-                    <div className="relative overflow-hidden rounded-3xl aspect-[3/4] bg-zinc-100 shadow-[0_16px_48px_rgba(0,0,0,0.12)] group-hover:shadow-[0_24px_64px_rgba(42,140,45,0.18)] transition-all duration-500 ring-2 ring-brand-green/0 group-hover:ring-brand-green/40 ring-offset-4 ring-offset-white">
+                    <div className="relative overflow-hidden rounded-3xl aspect-[4/5] bg-zinc-100 shadow-[0_16px_48px_rgba(0,0,0,0.12)] group-hover:shadow-[0_24px_64px_rgba(42,140,45,0.18)] transition-all duration-500 ring-2 ring-brand-green/0 group-hover:ring-brand-green/40 ring-offset-4 ring-offset-white">
                       <img src={m.img} alt={m.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
-                      <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/75 to-transparent">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute bottom-0 left-0 right-0 p-5">
                         <div className="translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                          <p className="text-white font-bold text-sm">{m.name}</p>
-                          <p className="text-brand-green text-[10px] font-bold uppercase tracking-widest mt-0.5">{m.title}</p>
+                          <p className="text-white font-bold text-[13px] tracking-wide">{m.name}</p>
+                          <p className="text-brand-green text-[9px] font-bold uppercase tracking-widest mt-1">{m.title}</p>
                         </div>
                       </div>
                     </div>
                   </Link>
                 ))}
               </div>
-              <Link href="/team" className="btn-outline group text-sm px-7 py-3.5 inline-flex self-end mr-4">
+              <Link href="/team" className="btn-outline group text-sm px-7 py-3.5 inline-flex self-start">
                 Full Bios
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>

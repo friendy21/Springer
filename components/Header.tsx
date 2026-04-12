@@ -55,12 +55,11 @@ export default function Header() {
         <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'h-[64px]' : 'h-[84px]'}`}>
 
           {/* Logo */}
-          <Link href="/" className="group flex items-baseline gap-1 select-none">
+          <Link href="/" className="group flex items-baseline gap-1.5 select-none">
             <span className="text-[22px] font-bold font-serif text-brand-green tracking-tight transition-opacity duration-200 group-hover:opacity-85" style={{ letterSpacing: '-0.01em' }}>
               Springer
             </span>
-            <span className="text-[10px] text-brand-green mb-1 mx-0.5">■</span>
-            <span className="text-[22px] font-light text-zinc-600 tracking-tight">
+            <span className="text-[22px] font-serif text-zinc-400 tracking-tight transition-opacity duration-200 group-hover:opacity-85">
               Capital
             </span>
           </Link>

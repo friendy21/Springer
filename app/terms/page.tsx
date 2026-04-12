@@ -18,8 +18,8 @@ export default function TermsPage() {
       </section>
 
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-zinc prose-a:text-brand-green hover:prose-a:text-brand-green-light max-w-none">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-zinc max-w-none prose-headings:font-serif prose-headings:font-bold prose-headings:text-zinc-900 prose-h3:text-[1.35rem] prose-h3:mt-12 prose-h3:mb-6 border-l-[3px] border-brand-green/20 pl-8 prose-p:text-zinc-500 prose-p:leading-[1.85] prose-p:mb-6 prose-li:text-zinc-500 prose-li:leading-[1.85] marker:text-brand-green prose-a:text-brand-green hover:prose-a:text-brand-green-light prose-a:transition-colors">
             <p><strong>Last Updated:</strong> March 2026</p>
 
             <h3>1. Terms</h3>
