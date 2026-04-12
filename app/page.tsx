@@ -360,7 +360,7 @@ export default function Home() {
       <section className="py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0 dot-pattern opacity-[0.15] pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <div className="reveal-left">
               <div className="flex items-center gap-3 mb-10">
                 <span className="w-10 h-px bg-brand-green" />
@@ -372,7 +372,14 @@ export default function Home() {
               <p className="text-zinc-600 text-base leading-relaxed mb-8 max-w-sm">
                 Springer Capital delivers ideas and solutions that make organizations better. Our leadership team brings decades of cross-market expertise.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 max-w-[420px] mb-8">
+              <Link href="/team" className="btn-outline group text-sm px-7 py-3.5 inline-flex self-start">
+                Full Bios
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="reveal-right">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 w-full max-w-[500px] ml-auto">
                 {[
                   { name: 'Patrick Kelly',   title: 'Investments Director', img: '/images/patrick2.png',  offset: '' },
                   { name: 'Isaac Rosenthal', title: 'Operations Director',  img: '/images/isaac2.png',    offset: 'sm:mt-8' },
@@ -391,10 +398,6 @@ export default function Home() {
                   </Link>
                 ))}
               </div>
-              <Link href="/team" className="btn-outline group text-sm px-7 py-3.5 inline-flex self-start">
-                Full Bios
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
             </div>
           </div>
         </div>
