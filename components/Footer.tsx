@@ -16,9 +16,13 @@ export default function Footer() {
           {/* Top section: brand + tagline */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-10 border-b border-zinc-800">
             <div>
-              <Link href="/" className="group inline-block">
-                <span className="text-4xl font-bold font-serif text-brand-green tracking-tight">Springer</span>
-                <span className="text-4xl font-light text-zinc-400 tracking-tight"> Capital</span>
+              <Link href="/" className="group flex items-baseline gap-1.5 select-none">
+                <span className="text-5xl font-bold font-serif text-brand-green tracking-tighter" style={{ letterSpacing: '-0.02em' }}>
+                  Springer
+                </span>
+                <span className="text-5xl font-serif text-zinc-400 tracking-tight" style={{ letterSpacing: '-0.01em' }}>
+                  Capital
+                </span>
               </Link>
               <p className="mt-3 text-zinc-500 text-sm max-w-xs leading-relaxed">
                 Premium real estate investment and advisory across global markets.
