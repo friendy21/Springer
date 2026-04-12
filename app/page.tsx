@@ -60,22 +60,22 @@ const VALUES = [
   {
     icon: Handshake,
     title: 'Real Estate Investors',
-    desc: 'Trusted advisors to business owners and senior executives of leading private equity firms and companies around the world.',
+    desc: 'Trusted advisors to business owners and senior executives of leading private equity firms and public and privately held companies around the world.',
   },
   {
     icon: TrendingUp,
     title: 'Strivers for Greatness',
-    desc: 'We strive to outperform the highest expectations with unique insights derived from deep industry relationships.',
+    desc: 'We strive to outperform their highest expectations with unique insights derived from deep industry relationships and a tightly integrated global team.',
   },
   {
     icon: ShieldCheck,
     title: 'Challenge Takers',
-    desc: "We take on clients' challenges as our own and proactively share insights before, during, and long after an engagement.",
+    desc: "We take on clients' challenges as our own, flex our approach and methodology to meet their needs, and proactively share insights and information before, during, and long after an engagement is complete.",
   },
   {
     icon: BarChart2,
     title: 'Analytical Advisors',
-    desc: 'We adopt a rigorous analytical process and deep respect for numbers to drive unparalleled advice.',
+    desc: 'We adopt a rigorous analytical process and deep respect for the numbers that are used as a baseline to drive unparalleled advice.',
   },
 ];
 
@@ -187,23 +187,25 @@ export default function Home() {
 
       {/* ═══════ ABOUT ═══════ */}
       <section id="aboutUs" className="py-24 max-sm:py-16 bg-white relative overflow-hidden">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 select-none opacity-50 pointer-events-none pr-10 hidden lg:block">
-          <span className="font-serif text-[14rem] font-bold text-zinc-50/80 leading-none">20+</span>
+        <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 select-none opacity-[0.02] pointer-events-none hidden lg:block">
+          <div className="w-[800px] h-[800px] rounded-full border-[120px] border-zinc-900" />
         </div>
         <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-brand-green/20 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div className="reveal-left">
-              <div className="flex items-center gap-3 mb-10">
-                <span className="w-16 h-px bg-brand-green/80 animate-pulse" />
-                <span className="section-label">About Springer Capital</span>
+              <div className="mb-10">
+                <span className="inline-flex items-center px-4 py-2 rounded-full bg-brand-green/10 text-[9px] font-bold uppercase tracking-widest text-brand-green">
+                  <span className="w-8 h-[1.5px] bg-brand-green/40 mr-3 hidden sm:block" />
+                  About Springer Capital
+                </span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold font-serif text-zinc-900 mb-8 tracking-tight" style={{ lineHeight: '1.08' }}>
+              <h2 className="text-[2.75rem] lg:text-[3.25rem] font-bold font-serif text-zinc-900 mb-8 tracking-tight" style={{ lineHeight: '1.05' }}>
                 Your Full Service<br />
                 <span className="text-brand-green">Real Estate Advisor</span>
               </h2>
-              <div className="space-y-5 text-zinc-600 leading-[1.9] text-base">
+              <div className="space-y-6 text-zinc-500 font-medium leading-[1.85] text-[15px]">
                 <p>
                   Springer Capital is a real estate investment and advisory group with operations in Hong Kong, China, and North America. Its founding partners are focused on world-class real estate opportunities and serve at the intersection of real estate direct investment and real estate advisory services.
                 </p>
@@ -214,40 +216,40 @@ export default function Home() {
                   Springer Capital offers full advisory service to its clients, ranging from optimal tax and entity structuring, cash management, accounting, asset & property management, work outs and investment reporting.
                 </p>
               </div>
-              <div className="mt-10 flex items-center gap-5">
-                <Link href="/about" className="btn-primary group text-sm px-7 py-3.5">
+              <div className="mt-12 flex items-center gap-6">
+                <Link href="/about" className="group bg-[#2a8c2d] hover:bg-[#227224] text-white font-medium text-sm px-6 py-3.5 rounded-lg flex items-center gap-2 transition-all shadow-[0_4px_16px_rgba(42,140,45,0.2)] hover:shadow-[0_6px_20px_rgba(42,140,45,0.3)]">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link href="/team" className="group flex items-center gap-2 text-zinc-500 hover:text-brand-green text-sm font-medium transition-colors">
+                <Link href="/team" className="group flex items-center gap-2 text-zinc-500 hover:text-zinc-800 text-sm font-medium transition-colors">
                   Meet the Team
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
 
-            <div className="reveal-right space-y-4">
-              <div className="flex flex-wrap gap-2 mb-6">
+            <div className="reveal-right">
+              <div className="flex flex-wrap gap-3 mb-12">
                 {[
-                  { city: 'Hong Kong', flag: '🇭🇰' },
-                  { city: 'Shanghai', flag: '🇨🇳' },
-                  { city: 'North America', flag: '🇺🇸' },
+                  { abv: 'HK', city: 'Hong Kong' },
+                  { abv: 'CN', city: 'Shanghai' },
+                  { abv: 'US', city: 'North America' },
                 ].map((loc) => (
-                  <span key={loc.city} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-zinc-50 border border-zinc-200 rounded-full text-xs font-semibold text-zinc-700">
-                    <span>{loc.flag}</span>
+                  <span key={loc.city} className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-zinc-200 rounded-full text-[13px] font-semibold text-zinc-700 shadow-sm">
+                    <span className="text-[9px] font-bold text-zinc-400">{loc.abv}</span>
                     {loc.city}
                   </span>
                 ))}
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12">
                 {VALUES.map((v, i) => (
-                  <div key={v.title} className={`reveal stagger-${i + 1} group flex items-start gap-4 p-5 bg-white border border-transparent rounded-none hover:border-brand-green/15 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.04)] transition-all duration-300 cursor-default`}>
-                    <div className="w-8 h-8 rounded-sm bg-brand-green/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-brand-green/20 transition-colors">
-                      <v.icon className="w-4 h-4 text-brand-green" />
+                  <div key={v.title} className={`reveal stagger-${i + 1} flex items-start flex-col gap-4 group cursor-default`}>
+                    <div className="w-10 h-10 rounded-lg bg-brand-green-[0.08] bg-[#f2f8f2] flex items-center justify-center flex-shrink-0 group-hover:bg-[#e6f2e6] transition-colors">
+                      <v.icon className="w-5 h-5 text-brand-green" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold text-zinc-900 mb-1.5">{v.title}</h3>
-                      <p className="text-xs text-zinc-500 leading-relaxed">{v.desc}</p>
+                      <h3 className="text-[15px] font-bold text-zinc-900 mb-2">{v.title}</h3>
+                      <p className="text-[13px] text-zinc-500 leading-relaxed">{v.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -329,17 +331,17 @@ export default function Home() {
               {
                 num: '01',
                 title: 'Active Market Dialogue',
-                body: 'We maintain active dialogue with real estate investors covering multi-family, logistics, mixed use, hospitality, and development land projects across Asia and the US.',
+                body: 'We maintain active dialogue with real estate investors covering multi-family, logistics, mixed use, hospitality, and development land projects across Asia and US.',
               },
               {
                 num: '02',
                 title: 'Innovative Financing Solutions',
-                body: 'We design innovative financing solutions including equity, acquisition financing, dividend recapitalization financing, and structured capital that meet our clients\' needs while optimizing terms.',
+                body: "Design innovative financing solutions including equity, acquisition financing, dividend recapitalization financing, and structured capital that meet our client's needs while optimizing terms.",
               },
               {
                 num: '03',
                 title: 'Data-Centric Strategies',
-                body: 'We leverage our financial models and data-centric strategies to support clients with actionable and measurable solutions.',
+                body: 'Leverage our financial models and data-centric strategies to support clients with actionable and measurable solution.',
               },
             ].map((step, i) => (
               <div key={step.num} className={`reveal stagger-${i + 1} group relative bg-white rounded-none p-8 border-t-2 border-brand-green/0 hover:border-brand-green shadow-sm hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-default overflow-hidden`}>
