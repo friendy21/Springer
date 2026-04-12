@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, ShieldCheck, Handshake, MapPin, Globe, Building2, Warehouse, Hotel, Layers, TreePine, ChevronDown, DollarSign, Clock, Target, ChartBar as BarChart2 } from 'lucide-react';
+import { ArrowRight, TrendingUp, ShieldCheck, Handshake, MapPin, Globe, Building2, Warehouse, Hotel, Layers, TreePine, ChevronDown, DollarSign, Clock, Target, ChartBar as BarChart2, ExternalLink } from 'lucide-react';
 import Tilt3D from '@/components/Tilt3D';
 import AnimatedCounter from '@/components/AnimatedCounter';
 
@@ -95,19 +95,25 @@ export default function Home() {
       <section ref={heroRef} className="relative h-screen min-h-[680px] max-h-[1100px] flex flex-col justify-end overflow-hidden bg-zinc-950">
         <div className="absolute inset-0 z-0">
           <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('/images/sh.png')" }} />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/55 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
         </div>
         <div className="absolute inset-0 z-[1] grid-pattern opacity-[0.035] pointer-events-none" />
 
-        <div className="absolute top-0 left-0 z-10 pointer-events-none">
-          <div className="w-16 h-px bg-brand-green" />
-          <div className="w-px h-16 bg-brand-green" />
+        <div className="absolute inset-0 z-10 pointer-events-none opacity-20 hidden md:block">
+          <div className="absolute top-0 left-0 w-16 h-px bg-brand-green" />
+          <div className="absolute top-0 left-0 w-px h-16 bg-brand-green" />
+          <div className="absolute top-0 right-0 w-16 h-px bg-brand-green" />
+          <div className="absolute top-0 right-0 w-px h-16 bg-brand-green" />
+          <div className="absolute bottom-0 left-0 w-16 h-px bg-brand-green" />
+          <div className="absolute bottom-0 left-0 w-px h-16 bg-brand-green" />
+          <div className="absolute bottom-0 right-0 w-16 h-px bg-brand-green" />
+          <div className="absolute bottom-0 right-0 w-px h-16 bg-brand-green" />
         </div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-20">
           <div className="hero-text-reveal mb-6">
-            <span className="inline-flex items-center gap-2.5 border border-brand-green/35 bg-black/25 backdrop-blur-sm px-4 py-1.5 rounded-full">
+            <span className="inline-flex items-center gap-2.5 border-l-4 border-brand-green bg-black/40 backdrop-blur-sm px-4 py-1.5 rounded-none shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-60" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green" />
@@ -116,63 +122,71 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="hero-text-reveal-2 font-bold font-serif text-white tracking-tight mb-5" style={{ fontSize: 'clamp(2.75rem, 6vw, 5.5rem)', lineHeight: '1.02', letterSpacing: '-0.025em' }}>
+          <h1 className="hero-text-reveal-2 font-bold font-serif text-white tracking-tight mb-5" style={{ fontSize: 'clamp(3rem, 7vw, 6.5rem)', lineHeight: '1.02', letterSpacing: '-0.025em' }}>
             Real Estate<br />
-            <span className="text-brand-green">Investors.</span>
+            <span className="text-brand-green" style={{ WebkitTextStroke: '1px rgba(42,140,45,0.4)' }}>Investors.</span>
           </h1>
 
-          <p className="hero-text-reveal-3 text-zinc-300/80 font-light leading-relaxed mb-10 max-w-md" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.2rem)' }}>
+          <p className="hero-text-reveal-3 text-zinc-200/70 font-light leading-relaxed mb-10 max-w-sm" style={{ fontSize: 'clamp(1rem, 1.8vw, 1.2rem)' }}>
             Trusted advisors to business owners and senior executives across global real estate markets.
           </p>
 
-          <div className="hero-text-reveal-4 flex flex-wrap items-center gap-4">
-            <Link href="/about" className="btn-primary group px-7 py-3.5 text-sm">
-              Read more
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          <div className="hero-text-reveal-4 flex flex-wrap items-center gap-6">
+            <Link href="/about" className="group flex items-center bg-zinc-100 hover:bg-white text-zinc-900 rounded-full pl-6 pr-2 py-2 transition-all shadow-[0_4px_24px_rgba(42,140,45,0.2)] hover:shadow-[0_8px_32px_rgba(42,140,45,0.3)]">
+              <span className="text-[12px] uppercase tracking-[0.06em] font-bold mr-4">Read more</span>
+              <div className="w-8 h-8 rounded-full bg-brand-green flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" />
+              </div>
             </Link>
-            <Link href="/contact" className="group flex items-center gap-2.5 text-zinc-400 hover:text-white transition-colors text-sm font-medium">
-              <span className="w-8 h-px bg-zinc-600 group-hover:w-12 group-hover:bg-brand-green transition-all duration-300" />
+            <Link href="/contact" className="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors text-sm font-medium">
               Contact Us
+              <div className="w-5 h-5 overflow-hidden relative">
+                <ArrowRight className="w-4 h-4 -rotate-45 absolute top-1/2 left-1/2 -translate-x-[150%] translate-y-[50%] group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 transition-transform duration-300" />
+                <ArrowRight className="w-4 h-4 -rotate-45 text-zinc-500 group-hover:text-transparent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-colors duration-300" />
+              </div>
             </Link>
           </div>
         </div>
 
         <button
           onClick={scrollDown}
-          className="absolute bottom-7 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 text-zinc-500 hover:text-brand-green transition-colors"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-zinc-500 hover:text-brand-green transition-colors group"
           aria-label="Scroll down"
         >
-          <span className="text-[9px] font-bold uppercase tracking-[0.22em]">Scroll</span>
-          <ChevronDown className="w-4 h-4 animate-bounce" />
+          <span className="text-[9px] font-bold uppercase tracking-[0.22em] mb-1">Scroll</span>
+          <div className="w-[1px] h-12 bg-zinc-800 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-brand-green origin-top animate-[scaleY_2s_ease-in-out_infinite]" />
+          </div>
         </button>
 
-        <div className="absolute bottom-8 right-6 z-10 hidden md:flex flex-col items-end gap-2">
-          {['North America', 'Shanghai', 'Hong Kong'].map((loc) => (
-            <div key={loc} className="flex items-center gap-2 text-[9px] font-semibold uppercase tracking-widest text-zinc-500/70">
-              <Globe className="w-2.5 h-2.5 text-brand-green/60" />
+        <div className="absolute bottom-8 right-6 z-10 hidden md:flex flex-col items-end gap-3 border-r border-zinc-800 pr-5">
+          {['North America', 'Shanghai', 'Hong Kong'].map((loc, i) => (
+            <div key={loc} className={`reveal-left stagger-${i + 1} flex items-center gap-2 text-[9px] font-semibold uppercase tracking-widest text-zinc-500/70`}>
               {loc}
+              <span className="text-brand-green font-bold select-none text-xs">·</span>
             </div>
           ))}
         </div>
       </section>
 
       {/* ═══════ STATS BAND ═══════ */}
-      <section className="bg-white border-b border-zinc-100 relative z-10">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-brand-green/30 to-transparent absolute z-20" />
+      <section className="bg-zinc-950 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-zinc-100">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-zinc-800 border-x border-zinc-800">
             {STATS.map((s, i) => (
               <div key={s.label} className={`reveal stagger-${i + 1} group px-8 py-10 relative overflow-hidden cursor-default`}>
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-green to-brand-green-light scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-brand-green/8 flex items-center justify-center flex-shrink-0 mt-1 group-hover:bg-brand-green/15 transition-colors">
+                <div className="absolute top-0 bottom-0 left-0 w-0.5 bg-gradient-to-b from-brand-green to-brand-green-light scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom" />
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full border border-brand-green/30 bg-transparent flex items-center justify-center flex-shrink-0 mt-1 transition-all group-hover:border-brand-green group-hover:shadow-[0_0_12px_rgba(42,140,45,0.3)]">
                     <s.icon className="w-4 h-4 text-brand-green" />
                   </div>
                   <div>
-                    <div className="text-[2rem] font-bold text-zinc-900 leading-none tabular-nums group-hover:text-brand-green transition-colors duration-300 mb-1">
+                    <div className="text-[2rem] font-bold font-serif text-white leading-none tabular-nums group-hover:text-brand-green transition-colors duration-300 mb-1">
                       {s.prefix}<AnimatedCounter end={s.value} suffix={s.suffix} />
                     </div>
-                    <div className="text-[11px] font-bold uppercase tracking-widest text-zinc-500">{s.label}</div>
-                    <div className="text-[10px] text-zinc-400 mt-0.5">{s.sub}</div>
+                    <div className="text-[11px] font-bold uppercase tracking-widest text-zinc-500 mt-2">{s.label}</div>
+                    <div className="text-[10px] text-zinc-600 mt-0.5">{s.sub}</div>
                   </div>
                 </div>
               </div>
@@ -180,17 +194,20 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-brand-green/30 to-transparent relative z-20" />
 
       {/* ═══════ ABOUT ═══════ */}
-      <section id="aboutUs" className="py-32 bg-white relative overflow-hidden">
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 dot-pattern opacity-[0.18] pointer-events-none" />
+      <section id="aboutUs" className="py-24 max-sm:py-16 bg-white relative overflow-hidden">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 select-none opacity-50 pointer-events-none pr-10 hidden lg:block">
+          <span className="font-serif text-[14rem] font-bold text-zinc-50/80 leading-none">20+</span>
+        </div>
         <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-brand-green/20 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             <div className="reveal-left">
               <div className="flex items-center gap-3 mb-10">
-                <span className="w-10 h-px bg-brand-green" />
+                <span className="w-16 h-px bg-brand-green/80 animate-pulse" />
                 <span className="section-label">About Springer Capital</span>
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold font-serif text-zinc-900 mb-8 tracking-tight" style={{ lineHeight: '1.08' }}>
@@ -233,19 +250,19 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-              {VALUES.map((v, i) => (
-                <Tilt3D key={v.title} intensity={6} className={`reveal stagger-${i + 1}`}>
-                  <div className="group flex items-start gap-4 p-5 bg-white border border-zinc-100 rounded-2xl hover:border-brand-green/20 hover:shadow-[0_8px_32px_rgba(0,0,0,0.07)] transition-all duration-300 cursor-default">
-                    <div className="icon-box flex-shrink-0">
-                      <v.icon className="w-5 h-5 text-brand-green" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {VALUES.map((v, i) => (
+                  <div key={v.title} className={`reveal stagger-${i + 1} group flex items-start gap-4 p-5 bg-white border border-transparent rounded-none hover:border-brand-green/15 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(0,0,0,0.04)] transition-all duration-300 cursor-default`}>
+                    <div className="w-8 h-8 rounded-sm bg-brand-green/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-brand-green/20 transition-colors">
+                      <v.icon className="w-4 h-4 text-brand-green" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold text-zinc-900 mb-1">{v.title}</h3>
+                      <h3 className="text-sm font-bold text-zinc-900 mb-1.5">{v.title}</h3>
                       <p className="text-xs text-zinc-500 leading-relaxed">{v.desc}</p>
                     </div>
                   </div>
-                </Tilt3D>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -274,31 +291,29 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-px bg-zinc-800/50 rounded-2xl overflow-hidden border border-zinc-800/60">
+          <div className="flex flex-col md:flex-row md:flex-wrap gap-2 md:gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 md:pb-0">
             {SERVICES.map((svc, i) => (
               <Link
                 key={svc.href}
                 href={svc.href}
-                className={`reveal stagger-${i + 1} group relative flex flex-col overflow-hidden bg-zinc-900 hover:bg-zinc-800 transition-colors duration-300 min-h-[280px] md:min-h-[340px]`}
+                className={`reveal stagger-${i + 1} group relative overflow-hidden flex flex-col justify-between min-h-[360px] md:min-h-[420px] snap-center shrink-0 w-[85vw] md:w-auto ${i < 3 ? 'md:flex-1 md:basis-[30%]' : 'md:flex-[1.5] md:basis-[48%]'}`}
               >
                 <div
-                  className="absolute inset-0 bg-cover bg-center opacity-10 group-hover:opacity-[0.18] transition-opacity duration-500"
+                  className="absolute inset-0 bg-cover bg-center brightness-50 group-hover:brightness-65 group-hover:scale-[1.02] transition-all duration-500"
                   style={{ backgroundImage: `url('${svc.image}')` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/30 to-transparent" />
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-green to-brand-green-light scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
-
-                <div className="relative z-10 flex flex-col h-full p-6">
-                  <span className="text-[11px] font-bold text-zinc-600 group-hover:text-brand-green/70 transition-colors mb-auto">{svc.num}</span>
-                  <div className="w-10 h-10 rounded-xl bg-zinc-800 group-hover:bg-brand-green/15 border border-zinc-700 group-hover:border-brand-green/30 flex items-center justify-center mb-4 mt-6 transition-all duration-300">
-                    <svc.icon className="w-5 h-5 text-zinc-500 group-hover:text-brand-green transition-colors" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                
+                <span className="relative z-10 p-6 text-[11px] font-bold tracking-[0.3em] text-brand-green/70">{svc.num}</span>
+                
+                <div className="relative z-10 p-6 flex justify-between items-end mt-auto">
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold font-serif text-white relative inline-block mb-1">
+                      {svc.label}
+                      <span className="absolute left-0 -bottom-1 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-500" />
+                    </h3>
                   </div>
-                  <h3 className="text-sm font-bold text-zinc-200 group-hover:text-white transition-colors leading-snug mb-2">{svc.label}</h3>
-                  <p className="text-xs text-zinc-600 group-hover:text-zinc-400 leading-relaxed transition-colors duration-300 mb-4">{svc.short}</p>
-                  <div className="flex items-center gap-2 text-zinc-600 group-hover:text-brand-green transition-colors text-[11px] font-bold uppercase tracking-widest">
-                    <span>Explore</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  <ArrowRight className="w-6 h-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300" />
                 </div>
               </Link>
             ))}
@@ -307,7 +322,7 @@ export default function Home() {
       </section>
 
       {/* ═══════ WHAT WE DO ═══════ */}
-      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+      <section className="py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0 line-pattern pointer-events-none opacity-60" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-20 reveal">
@@ -315,7 +330,9 @@ export default function Home() {
               <span className="w-1.5 h-1.5 rounded-full bg-brand-green" />
               Our Approach
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold font-serif text-zinc-900 mt-5 tracking-tight" style={{ lineHeight: '1.08' }}>What We Do</h2>
+            <h2 className="text-4xl md:text-5xl font-bold font-serif text-zinc-900 mt-5 tracking-tight" style={{ lineHeight: '1.08' }}>
+              What <span className="mx-4 text-brand-green/30 font-sans font-light">|</span> We Do
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -336,11 +353,12 @@ export default function Home() {
                 body: 'We leverage our financial models and data-centric strategies to support clients with actionable and measurable solutions.',
               },
             ].map((step, i) => (
-              <div key={step.num} className={`reveal stagger-${i + 1} group relative bg-white rounded-2xl p-8 border border-zinc-100 hover:border-brand-green/20 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-default`}>
-                <div className="absolute left-0 top-6 bottom-6 w-0.5 bg-gradient-to-b from-brand-green/0 via-brand-green/40 to-brand-green/0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-                <div className="text-5xl font-bold font-serif text-zinc-100 group-hover:text-brand-green/15 transition-colors mb-6 leading-none">{step.num}</div>
-                <h3 className="text-base font-bold text-zinc-900 mb-3">{step.title}</h3>
-                <p className="text-sm text-zinc-500 leading-relaxed">{step.body}</p>
+              <div key={step.num} className={`reveal stagger-${i + 1} group relative bg-white rounded-none p-8 border-t-2 border-brand-green/0 hover:border-brand-green shadow-sm hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-default overflow-hidden`}>
+                <div className="absolute bottom-1 right-2 text-[6rem] font-bold font-serif text-zinc-50 group-hover:text-brand-green/10 transition-colors leading-none select-none z-0">{step.num}</div>
+                <div className="relative z-10">
+                  <h3 className="text-base font-bold text-zinc-900 mb-3">{step.title}</h3>
+                  <p className="text-sm text-zinc-500 leading-relaxed">{step.body}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -363,28 +381,28 @@ export default function Home() {
               <p className="text-zinc-600 text-base leading-relaxed mb-8 max-w-sm">
                 Springer Capital delivers ideas and solutions that make organizations better. Our leadership team brings decades of cross-market expertise.
               </p>
-              <Link href="/team" className="btn-outline group text-sm px-7 py-3.5 inline-flex">
+              <div className="flex flex-col sm:flex-row gap-6 w-full mb-6">
+                {[
+                  { name: 'Patrick Kelly',   title: 'Investments Director', img: '/images/patrick2.png',  offset: '' },
+                  { name: 'Isaac Rosenthal', title: 'Operations Director',  img: '/images/isaac2.png',    offset: 'sm:mt-10' },
+                ].map((m) => (
+                  <Link href="/team" key={m.name} className={`group flex-1 ${m.offset}`}>
+                    <div className="relative overflow-hidden rounded-3xl aspect-[3/4] bg-zinc-100 shadow-[0_16px_48px_rgba(0,0,0,0.12)] group-hover:shadow-[0_24px_64px_rgba(42,140,45,0.18)] transition-all duration-500 ring-2 ring-brand-green/0 group-hover:ring-brand-green/40 ring-offset-4 ring-offset-white">
+                      <img src={m.img} alt={m.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                      <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/75 to-transparent">
+                        <div className="translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                          <p className="text-white font-bold text-sm">{m.name}</p>
+                          <p className="text-brand-green text-[10px] font-bold uppercase tracking-widest mt-0.5">{m.title}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <Link href="/team" className="btn-outline group text-sm px-7 py-3.5 inline-flex self-end mr-4">
                 Full Bios
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-            </div>
-
-            <div className="reveal-right flex flex-col sm:flex-row gap-6">
-              {[
-                { name: 'Patrick Kelly',   title: 'Investments Director', img: '/images/patrick2.png',  offset: '' },
-                { name: 'Isaac Rosenthal', title: 'Operations Director',  img: '/images/isaac2.png',    offset: 'sm:mt-10' },
-              ].map((m) => (
-                <Link href="/team" key={m.name} className={`group flex-1 ${m.offset}`}>
-                  <div className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-zinc-100 shadow-[0_16px_48px_rgba(0,0,0,0.12)] group-hover:shadow-[0_24px_64px_rgba(42,140,45,0.18)] transition-all duration-500">
-                    <img src={m.img} alt={m.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/75 to-transparent">
-                      <p className="text-white font-bold text-sm">{m.name}</p>
-                      <p className="text-brand-green text-[10px] font-bold uppercase tracking-widest mt-0.5">{m.title}</p>
-                    </div>
-                    <div className="absolute inset-0 rounded-2xl border-2 border-brand-green/0 group-hover:border-brand-green/30 transition-all duration-500" />
-                  </div>
-                </Link>
-              ))}
             </div>
           </div>
         </div>
@@ -411,13 +429,13 @@ export default function Home() {
               </p>
               <Link href="/contact" className="btn-primary group text-sm px-7 py-3.5 inline-flex">
                 Start a Conversation
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ExternalLink className="w-4 h-4 ml-2 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>
 
             <div className="reveal-right">
-              <div className="bg-zinc-900 rounded-2xl border border-zinc-800 overflow-hidden">
-                <div className="h-0.5 bg-gradient-to-r from-brand-green to-brand-green-light" />
+              <div className="bg-zinc-900 rounded-2xl border border-zinc-800 overflow-hidden relative" style={{ boxShadow: '0 2px 8px rgba(42,140,45,0.4)' }}>
+                <div className="h-[3px] bg-gradient-to-r from-brand-green to-brand-green-light" />
                 {[
                   { label: 'Structure',     value: 'Primarily LP equity' },
                   { label: 'Deal Type',     value: 'One-off investments' },
@@ -425,9 +443,9 @@ export default function Home() {
                   { label: 'Hold Period',   value: '3 — 5 years' },
                   { label: 'Geography',     value: 'High-growth cities' },
                 ].map((row, i) => (
-                  <div key={row.label} className={`flex items-center justify-between px-7 py-4 ${i < 4 ? 'border-b border-zinc-800' : ''} group hover:bg-zinc-800/50 transition-colors cursor-default`}>
-                    <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest">{row.label}</span>
-                    <span className="text-white text-sm font-semibold group-hover:text-brand-green transition-colors">{row.value}</span>
+                  <div key={row.label} className={`flex items-center justify-between px-7 py-5 ${i % 2 === 0 ? 'bg-zinc-900' : 'bg-zinc-950'} group hover:bg-zinc-800/80 transition-colors cursor-default`}>
+                    <span className="text-zinc-500 text-[10px] font-bold uppercase tracking-[0.3em]">{row.label}</span>
+                    <span className={`text-sm font-semibold transition-colors ${(row.label === 'Equity Range' || row.label === 'Hold Period') ? 'text-brand-green' : 'text-white group-hover:text-brand-green'}`}>{row.value}</span>
                   </div>
                 ))}
               </div>
@@ -438,29 +456,30 @@ export default function Home() {
 
       {/* ═══════ CTA STRIP ═══════ */}
       <section className="py-24 bg-brand-green relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern opacity-[0.08] pointer-events-none" />
-        <div className="floating-shape shape-ring w-48 h-48 -top-12 -right-12 opacity-10" style={{ borderColor: 'rgba(255,255,255,0.2)' }} />
-        <div className="floating-shape shape-ring w-32 h-32 bottom-0 left-16 opacity-8" style={{ borderColor: 'rgba(255,255,255,0.15)', animationDelay: '-6s' }} />
+        <div className="absolute inset-0 pointer-events-none opacity-8" style={{ backgroundImage: 'repeating-linear-gradient(-45deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5) 1.5px, transparent 1.5px, transparent 14px)' }} />
+        <div className="floating-shape shape-ring w-96 h-96 -top-24 -right-24 opacity-15" style={{ borderColor: 'rgba(255,255,255,0.3)' }} />
+        <div className="floating-shape shape-ring w-[32rem] h-[32rem] -bottom-32 -left-32 opacity-10" style={{ borderColor: 'rgba(255,255,255,0.25)', animationDelay: '-6s' }} />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+          <span className="absolute -top-12 -left-10 text-[10rem] font-serif text-white/15 leading-none select-none pointer-events-none">“</span>
           <div className="flex items-center justify-center gap-3 mb-7">
             <MapPin className="w-4 h-4 text-white/70" />
             <span className="text-white/70 text-[10px] font-bold uppercase tracking-[0.25em]">HK · Shanghai · North America</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-serif text-white mb-5 tracking-tight" style={{ lineHeight: '1.08' }}>
+          <h2 className="relative z-10 text-3xl md:text-5xl lg:text-5xl font-bold font-serif text-white mb-5 tracking-tight" style={{ lineHeight: '1.08' }}>
             Ready to discuss your investment goals?
           </h2>
-          <p className="text-white/70 text-lg font-light mb-10 max-w-lg mx-auto leading-relaxed">
+          <p className="text-white/80 text-lg font-light mb-10 max-w-lg mx-auto leading-relaxed">
             Connect with the Springer Capital team today.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact" className="group inline-flex items-center gap-2 bg-white text-brand-green font-semibold px-8 py-4 rounded-lg text-sm hover:bg-zinc-50 transition-colors shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+            <Link href="/contact" className="group inline-flex items-center gap-2 bg-white text-brand-green font-semibold px-8 py-4 rounded-lg text-sm hover:bg-zinc-50 transition-colors shadow-[0_8px_32px_rgba(0,0,0,0.25)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)] hover:-translate-y-0.5">
               Contact Us
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/about" className="group inline-flex items-center gap-2 border border-white/30 text-white/85 hover:text-white hover:border-white/60 font-medium px-8 py-4 rounded-lg text-sm transition-colors">
-              Learn More
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <Link href="/about" className="group relative inline-flex items-center gap-2 border border-white/50 text-white/90 hover:text-white hover:border-white font-medium px-8 py-4 rounded-lg text-sm overflow-hidden">
+              <span className="relative z-10 flex items-center gap-2">Learn More <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
+              <span className="absolute bottom-0 left-0 w-full h-[3px] bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
             </Link>
           </div>
         </div>

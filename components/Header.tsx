@@ -39,22 +39,24 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300 ${scrolled ? 'shadow-[0_4px_30px_rgba(0,0,0,0.08)]' : ''}`}>
+      <div className={`absolute top-0 w-full h-px bg-brand-green transition-opacity duration-300 ${scrolled ? 'opacity-0' : 'opacity-100'}`} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-[84px]">
+        <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'h-[64px]' : 'h-[84px]'}`}>
 
           {/* Logo */}
-          <Link href="/" className="group flex items-baseline gap-0.5 select-none">
+          <Link href="/" className="group flex items-baseline gap-1 select-none">
             <span className="text-[22px] font-bold font-serif text-brand-green tracking-tight transition-opacity duration-200 group-hover:opacity-85" style={{ letterSpacing: '-0.01em' }}>
               Springer
             </span>
+            <span className="text-[10px] text-brand-green mb-1 mx-0.5">■</span>
             <span className="text-[22px] font-light text-zinc-600 tracking-tight">
-              &nbsp;Capital
+              Capital
             </span>
           </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1">
-            <Link href="/" className={`nav-link px-3 py-2 text-[13px] font-medium transition-colors ${isActive('/') ? 'text-brand-green' : 'text-zinc-600 hover:text-brand-green'}`}>
+            <Link href="/" className={`nav-link px-3 py-2 text-[12px] tracking-[0.06em] uppercase font-semibold transition-colors ${isActive('/') ? 'text-brand-green' : 'text-zinc-600 hover:text-brand-green'}`}>
               Home
             </Link>
 
@@ -64,11 +66,11 @@ export default function Header() {
             {/* Products dropdown */}
             <DropdownMenu label="Products" items={PRODUCT_LINKS} pathname={pathname} wide />
 
-            <Link href="/career" className={`nav-link px-3 py-2 text-[13px] font-medium transition-colors ${isActive('/career') ? 'text-brand-green' : 'text-zinc-600 hover:text-brand-green'}`}>
+            <Link href="/career" className={`nav-link px-3 py-2 text-[12px] tracking-[0.06em] uppercase font-semibold transition-colors ${isActive('/career') ? 'text-brand-green' : 'text-zinc-600 hover:text-brand-green'}`}>
               Careers
             </Link>
 
-            <Link href="/contact" className="ml-3 btn-primary text-[13px] px-5 py-2.5 rounded-md">
+            <Link href="/contact" className="ml-3 bg-brand-green text-white text-[12px] tracking-[0.06em] uppercase font-semibold px-6 py-2.5 rounded-full hover:shadow-[0_0_0_3px_rgba(42,140,45,0.15)] transition-all duration-300">
               Contact
             </Link>
           </nav>
@@ -124,7 +126,7 @@ function DropdownMenu({ label, items, pathname, wide = false }: {
 }) {
   return (
     <div className="relative group">
-      <button className="nav-link flex items-center gap-1 px-3 py-2 text-[13px] font-medium text-zinc-600 hover:text-brand-green transition-colors cursor-pointer">
+      <button className="nav-link flex items-center gap-1 px-3 py-2 text-[12px] tracking-[0.06em] uppercase font-semibold text-zinc-600 hover:text-brand-green transition-colors cursor-pointer">
         {label}
         <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
       </button>
@@ -132,18 +134,18 @@ function DropdownMenu({ label, items, pathname, wide = false }: {
       {/* Dropdown panel */}
       <div
         className="absolute top-full left-0 mt-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-200 ease-out"
-        style={{ width: wide ? 220 : 188 }}
+        style={{ width: wide ? 240 : 200 }}
       >
-        <div className="bg-white rounded-2xl shadow-[0_12px_48px_rgba(0,0,0,0.12),0_2px_8px_rgba(0,0,0,0.06)] border border-zinc-100 overflow-hidden">
+        <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-[0_24px_64px_rgba(0,0,0,0.18)] border border-zinc-100 overflow-hidden">
           <div className="h-0.5 bg-gradient-to-r from-brand-green to-brand-green-light" />
           <div className="py-1.5">
             {items.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex items-center gap-2.5 px-4 py-2.5 text-[13px] transition-colors hover:bg-zinc-50 hover:text-brand-green ${pathname === item.href ? 'text-brand-green font-medium' : 'text-zinc-700'}`}
+                className={`flex items-center gap-2.5 px-4 py-2.5 text-[13px] transition-all border-l-2 border-transparent hover:border-brand-green hover:bg-zinc-50/50 hover:text-brand-green ${pathname === item.href ? 'text-brand-green font-medium border-brand-green' : 'text-zinc-700'}`}
               >
-                <span className={`w-1.5 h-1.5 rounded-full transition-colors flex-shrink-0 ${pathname === item.href ? 'bg-brand-green' : 'bg-zinc-200'}`} />
+                <span className={`w-1.5 h-1.5 rounded-full transition-colors flex-shrink-0 ${pathname === item.href ? 'bg-brand-green' : 'bg-transparent'}`} />
                 {item.label}
               </Link>
             ))}

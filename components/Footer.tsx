@@ -17,12 +17,13 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-10 border-b border-zinc-800">
             <div>
               <Link href="/" className="group inline-block">
-                <span className="text-3xl font-bold font-serif text-brand-green tracking-tight">Springer</span>
-                <span className="text-3xl font-light text-zinc-400 tracking-tight"> Capital</span>
+                <span className="text-4xl font-bold font-serif text-brand-green tracking-tight">Springer</span>
+                <span className="text-4xl font-light text-zinc-400 tracking-tight"> Capital</span>
               </Link>
               <p className="mt-3 text-zinc-500 text-sm max-w-xs leading-relaxed">
                 Premium real estate investment and advisory across global markets.
               </p>
+              <div className="mt-6 w-16 h-px bg-zinc-800" />
             </div>
             <Link href="/contact" className="mt-6 md:mt-0 inline-flex items-center gap-2 text-brand-green hover:text-white border border-brand-green/40 hover:border-brand-green hover:bg-brand-green/10 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 group">
               Get in Touch
@@ -52,8 +53,8 @@ export default function Footer() {
                     href={item.href}
                     className="text-zinc-400 hover:text-brand-green text-sm transition-colors duration-200 py-0.5 flex items-center gap-1.5 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-zinc-700 group-hover:bg-brand-green transition-colors flex-shrink-0" />
-                    {item.label}
+                    <span className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all flex-shrink-0 text-brand-green">→</span>
+                    <span className="-ml-4 group-hover:ml-0 transition-all">{item.label}</span>
                   </Link>
                 ))}
               </div>
@@ -65,8 +66,8 @@ export default function Footer() {
               <ul className="space-y-5">
                 <li>
                   <a href="mailto:contact@springer.capital" className="flex items-start gap-3 group">
-                    <div className="w-8 h-8 rounded-lg bg-zinc-800 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-green/20 transition-colors">
-                      <Mail className="w-4 h-4 text-brand-green" />
+                    <div className="w-7 h-7 rounded-full border border-zinc-700 flex items-center justify-center flex-shrink-0 group-hover:border-brand-green group-hover:bg-brand-green/10 transition-colors">
+                      <Mail className="w-3.5 h-3.5 text-brand-green" />
                     </div>
                     <span className="text-zinc-400 hover:text-white text-sm transition-colors leading-relaxed mt-1">
                       contact@springer.capital
@@ -74,8 +75,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-zinc-800 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-4 h-4 text-brand-green" />
+                  <div className="w-7 h-7 rounded-full border border-zinc-700 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-3.5 h-3.5 text-brand-green" />
                   </div>
                   <div className="text-zinc-400 text-sm leading-relaxed mt-1">
                     <p>+1 224-216-3685</p>
@@ -90,23 +91,23 @@ export default function Footer() {
               <h4 className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-6">Locations</h4>
               <ul className="space-y-5">
                 <li className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-zinc-800 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4 text-brand-green" />
+                  <div className="w-7 h-7 rounded-full border border-zinc-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <MapPin className="w-3.5 h-3.5 text-brand-green" />
                   </div>
                   <div className="text-zinc-400 text-sm leading-relaxed">
                     <p className="text-zinc-300 font-medium text-xs uppercase tracking-wide mb-1">North America</p>
                     <p>430 Beverly Drive</p>
-                    <p>Wilmette, Illinois 60091</p>
+                    <p>Wilmette, Illinois 60091 <span className="text-zinc-600 text-[10px] ml-1">(GMT-5)</span></p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-zinc-800 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4 text-brand-green" />
+                  <div className="w-7 h-7 rounded-full border border-zinc-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <MapPin className="w-3.5 h-3.5 text-brand-green" />
                   </div>
                   <div className="text-zinc-400 text-sm leading-relaxed">
                     <p className="text-zinc-300 font-medium text-xs uppercase tracking-wide mb-1">Asia</p>
                     <p>Kangding East Road 45</p>
-                    <p>Jingan District, Shanghai 200020</p>
+                    <p>Jingan District, Shanghai 200020 <span className="text-zinc-600 text-[10px] ml-1">(GMT+8)</span></p>
                   </div>
                 </li>
               </ul>
@@ -120,9 +121,9 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-3">
           <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
             <span>Copyright &copy; {new Date().getFullYear()} All Rights Reserved</span>
-            <span className="hidden sm:inline text-zinc-800">|</span>
+            <span className="hidden sm:inline text-zinc-600">·</span>
             <Link href="/privacy" className="hover:text-zinc-300 transition-colors">Privacy Policy</Link>
-            <span className="text-zinc-800">|</span>
+            <span className="text-zinc-600">·</span>
             <Link href="/terms" className="hover:text-zinc-300 transition-colors">Terms of Service</Link>
           </div>
           <div className="font-serif text-brand-green/80 font-bold text-sm tracking-[0.2em] uppercase">
@@ -134,10 +135,10 @@ export default function Footer() {
       {/* Back to top */}
       <a
         href="#top"
-        className="fixed bottom-6 right-6 w-11 h-11 bg-brand-green text-white flex items-center justify-center rounded-full shadow-[0_4px_20px_rgba(42,140,45,0.4)] hover:shadow-[0_8px_30px_rgba(42,140,45,0.5)] hover:-translate-y-1 transition-all duration-300 z-50 group"
+        className="fixed bottom-6 right-6 w-8 h-8 bg-zinc-900 border border-zinc-700 text-zinc-500 flex items-center justify-center rounded-full hover:border-brand-green hover:text-brand-green transition-all duration-300 z-50 group"
         aria-label="Back to top"
       >
-        <ChevronUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
+        <ChevronUp className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
       </a>
     </>
   );
