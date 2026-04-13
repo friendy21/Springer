@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Mail, Phone, MapPin, Send, Clock, Globe } from 'lucide-react';
 
 export default function ContactPage() {
@@ -129,6 +130,48 @@ export default function ContactPage() {
                         title="Please enter your message (at least 10 characters)"
                       />
                     </div>
+
+                    {/* Mandatory Consent — required for SES / GDPR / CAN-SPAM */}
+                    <div className="flex items-start gap-3 p-4 bg-zinc-50 border border-zinc-200 rounded-xl">
+                      <input
+                        type="checkbox"
+                        id="consent"
+                        name="consent"
+                        required
+                        className="mt-0.5 w-4 h-4 rounded border-zinc-300 text-brand-green focus:ring-brand-green accent-[#2a8c2d] flex-shrink-0 cursor-pointer"
+                      />
+                      <label htmlFor="consent" className="text-xs text-zinc-600 leading-relaxed cursor-pointer">
+                        I agree to the{' '}
+                        <Link href="/privacy" className="text-brand-green underline underline-offset-2 hover:text-brand-green-light">
+                          Privacy Policy
+                        </Link>{' '}
+                        and consent to Springer Capital contacting me regarding my inquiry. I understand I may
+                        withdraw consent at any time via the unsubscribe link in any future email.{' '}
+                        <span className="text-red-500 font-bold">*</span>
+                      </label>
+                    </div>
+
+                    {/* Optional Marketing Opt-In — separate from transactional consent */}
+                    <div className="flex items-start gap-3 p-4 bg-zinc-50 border border-zinc-200 rounded-xl">
+                      <input
+                        type="checkbox"
+                        id="marketing"
+                        name="marketing_opt_in"
+                        className="mt-0.5 w-4 h-4 rounded border-zinc-300 text-brand-green focus:ring-brand-green accent-[#2a8c2d] flex-shrink-0 cursor-pointer"
+                      />
+                      <label htmlFor="marketing" className="text-xs text-zinc-600 leading-relaxed cursor-pointer">
+                        I would also like to receive occasional updates, market insights, and news from
+                        Springer Capital. I can unsubscribe at any time. <span className="text-zinc-400">(Optional)</span>
+                      </label>
+                    </div>
+
+                    {/* Inline privacy notice */}
+                    <p className="text-[10px] text-zinc-400 leading-relaxed">
+                      By submitting this form, your information will be used solely to respond to your inquiry
+                      in accordance with our{' '}
+                      <Link href="/privacy" className="text-brand-green hover:underline">Privacy Policy</Link>.
+                      We do not sell or share your personal data with third parties for their marketing purposes.
+                    </p>
 
                     <input type="hidden" name="_next" value="https://www.greentree.group/Springer/thankyou.html" />
                     <input name="_formsubmit_id" type="text" style={{ display: 'none' }} />

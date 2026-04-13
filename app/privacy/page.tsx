@@ -17,27 +17,82 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-zinc max-w-none prose-headings:font-serif prose-headings:font-bold prose-headings:text-zinc-900 prose-h3:text-[1.35rem] prose-h3:mt-12 prose-h3:mb-6 border-l-[3px] border-brand-green/20 pl-8 prose-p:text-zinc-500 prose-p:leading-[1.85] prose-p:mb-6 prose-li:text-zinc-500 prose-li:leading-[1.85] marker:text-brand-green prose-a:text-brand-green hover:prose-a:text-brand-green-light prose-a:transition-colors">
-            <h3>Information We Collect</h3>
-            <p>We may collect personal information such as your name, email address, phone number, and any other details you voluntarily provide when you communicate with us through forms on our site or via email.</p>
+            
+            <p><strong>Effective Date:</strong> April 2026 | <strong>Last Updated:</strong> April 2026</p>
 
-            <h3>How We Use Your Information</h3>
-            <p>The information we collect is used to:</p>
+            <h3>1. Identity of the Data Controller</h3>
+            <p><strong>Springer Capital LLC</strong> ("we," "our," or "us") is the data controller responsible for your personal information. We are registered in the State of Illinois, USA.</p>
             <ul>
-              <li>Provide, operate, and maintain our site.</li>
-              <li>Improve, personalize, and expand our site.</li>
-              <li>Understand and analyze how you use our site.</li>
-              <li>Develop new products, services, features, and functionality.</li>
-              <li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the site, and for marketing and promotional purposes.</li>
+              <li><strong>Physical Address:</strong> 430 Beverly Drive, Wilmette, Illinois 60091</li>
+              <li><strong>Primary Privacy Contact:</strong> <a href="mailto:contact@springer.capital">contact@springer.capital</a></li>
             </ul>
 
-            <h3>Cookies and Tracking Technologies</h3>
-            <p>We use cookies and similar tracking technologies to track the activity on our site and hold certain information. Cookies are files with small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+            <h3>2. Information We Collect & Lawful Basis for Processing</h3>
+            <p>We process your personal data under the following lawful bases (in compliance with GDPR and applicable laws):</p>
+            <ul>
+              <li><strong>Contact Form Submissions:</strong> Processed under <em>Legitimate Interest</em> and <em>Contractual Necessity</em> to respond to your specific inquiries.</li>
+              <li><strong>Email Follow-up Communications:</strong> Processed under <em>Legitimate Interest</em> to provide relevant business updates (with a right to opt out).</li>
+              <li><strong>Analytics & Cookies:</strong> Processed strictly under <em>Consent</em> obtained via our Cookie Banner.</li>
+            </ul>
+            <p>Information collected may include your name, email address, phone number, and any details you voluntarily provide when communicating with us.</p>
 
-            <h3>Third-Party Privacy Policies</h3>
-            <p>Springer Capital's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information.</p>
+            <h3>3. Data Retention Policy</h3>
+            <p>We do not retain your data indefinitely. The retention schedules are as follows:</p>
+            <ul>
+              <li><strong>Contact Form Data:</strong> Retained for <strong>12 months</strong> after the inquiry is resolved, after which it is securely deleted.</li>
+              <li><strong>Email Correspondence:</strong> Retained for up to <strong>7 years</strong> solely to comply with legal, tax, and business record-keeping obligations.</li>
+              <li><strong>Cookie/Analytics Data:</strong> Retained per the cookie provider's default term or until you clear your browser cache/preferences.</li>
+            </ul>
+
+            <h3>4. Email Communication and Opt-Out Mechanism</h3>
+            <p>By submitting the contact form on our website, you may receive follow-up emails from Springer Capital regarding your inquiry or our services. You have the right to control these communications:</p>
+            <ul>
+              <li><strong>Unsubscribe Link:</strong> Every marketing or promotional email we send contains a clear unsubscribe link at the bottom.</li>
+              <li><strong>Timeframe:</strong> Opt-out requests are honored promptly and within <strong>10 business days</strong> in compliance with the CAN-SPAM Act.</li>
+              <li><strong>Manual Opt-Out:</strong> You may opt out by emailing <a href="mailto:contact@springer.capital">contact@springer.capital</a> with the subject line "Unsubscribe".</li>
+              <li><strong>Suppression:</strong> Once opted out, your email address will be placed on a suppression list to guarantee you do not receive future marketing communications.</li>
+            </ul>
+
+            <h3>5. Cookies and Tracking Technologies</h3>
+            <p>We use cookies to improve your browsing experience. Types of cookies used include:</p>
+            <ul>
+              <li><strong>Essential Cookies:</strong> Required for basic site functionality.</li>
+              <li><strong>Analytics/Performance Cookies:</strong> Used to understand site traffic (provided by services such as Google Analytics).</li>
+            </ul>
+            <p>You can manage or refuse non-essential cookies via the designated cookie consent banner upon visiting our website. Refusing cookies will not significantly restrict your use of the website.</p>
+
+            <h3>6. Third-Party Data Processors</h3>
+            <p>We do not sell personal data to third parties. We use the following selected third-party processors to operate our website securely:</p>
+            <ul>
+              <li><strong>formsubmit.co:</strong> Handles routing for our website contact forms. Data is securely relayed through their infrastructure. Please review the <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">FormSubmit Privacy Policy</a>.</li>
+              <li><strong>Amazon Web Services (SES):</strong> Utilized to securely transmit email communications. Please refer to the <a href="https://aws.amazon.com/privacy/" target="_blank" rel="noopener">AWS Privacy Notice</a>.</li>
+            </ul>
+
+            <h3>7. International Data Transfers</h3>
+            <p>Springer Capital operates globally with offices in the United States, Hong Kong, and China. Your data may be transferred to and processed in these jurisdictions. We utilize legally recognized transfer mechanisms, such as Standard Contractual Clauses, to ensure your data is protected. For users in Hong Kong, we comply with the Personal Data (Privacy) Ordinance (PDPO) Cap. 486.</p>
+
+            <h3>8. Your Rights</h3>
+            <p>Depending on your jurisdiction, you possess the following rights regarding your personal data:</p>
+            <ul>
+              <li><strong>Right to Access:</strong> Request a copy of your data.</li>
+              <li><strong>Right to Rectification:</strong> Request correction of inaccurate data.</li>
+              <li><strong>Right to Erasure:</strong> Request the deletion of your data ("Right to be Forgotten").</li>
+              <li><strong>Right to Restrict / Object:</strong> Object to processing based on legitimate interest.</li>
+              <li><strong>Right to Data Portability:</strong> Obtain your data in a portable format.</li>
+              <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for marketing emails at any time.</li>
+            </ul>
+            <p>To exercise these rights, please contact us directly at <a href="mailto:contact@springer.capital">contact@springer.capital</a>.</p>
+
+            <h3>9. Children's Privacy</h3>
+            <p>Our website and services are not directed at children under the age of 13 (in the US) or under 16 (in the EU). We do not knowingly collect personal data from children.</p>
+
+            <h3>10. Policy Updates and Complaints</h3>
+            <p>We will notify you of any material changes to this Privacy Policy by updating the Last Updated date atop this page, and for significant changes, via a prominent notice on our website.</p>
+            <p>If you have any questions or wish to file a privacy complaint, please email <a href="mailto:contact@springer.capital">contact@springer.capital</a>. We respond to all privacy inquiries within <strong>30 days</strong>. You also maintain the right to lodge a complaint with your local supervisory authority or Data Protection Authority.</p>
+
           </div>
         </div>
       </section>

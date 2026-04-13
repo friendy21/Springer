@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function TermsPage() {
   return (
@@ -17,33 +18,46 @@ export default function TermsPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-zinc max-w-none prose-headings:font-serif prose-headings:font-bold prose-headings:text-zinc-900 prose-h3:text-[1.35rem] prose-h3:mt-12 prose-h3:mb-6 border-l-[3px] border-brand-green/20 pl-8 prose-p:text-zinc-500 prose-p:leading-[1.85] prose-p:mb-6 prose-li:text-zinc-500 prose-li:leading-[1.85] marker:text-brand-green prose-a:text-brand-green hover:prose-a:text-brand-green-light prose-a:transition-colors">
-            <p><strong>Last Updated:</strong> March 2026</p>
+            
+            <p><strong>Effective Date:</strong> April 2026 | <strong>Last Updated:</strong> April 2026</p>
 
-            <h3>1. Terms</h3>
-            <p>By accessing the website at springer.capital, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>
+            <h3>1. Introduction and Agreement</h3>
+            <p>By accessing the website at springer.capital, you agree to be bound by these Terms of Service. If you do not agree with any of these terms, you are prohibited from using or accessing this site. Your use of this site is also explicitly governed by our <Link href="/privacy">Privacy Policy</Link>, which is incorporated into these Terms by reference.</p>
 
-            <h3>2. Use License</h3>
-            <p>Permission is granted to temporarily download one copy of the materials (information or software) on Springer Capital's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+            <h3>2. No Investment or Financial Advice</h3>
+            <p>The content provided on this website is strictly for informational and educational purposes only. Nothing on this website constitutes investment, legal, tax, or financial advice. Past performance is not indicative of, and does not guarantee, future results. Visitors and prospective clients should consult with qualified independent advisors before making any commercial or investment decisions.</p>
+
+            <h3>3. Electronic Communications</h3>
+            <p>By voluntarily submitting our contact forms, you expressly consent to receive electronic communications from Springer Capital regarding your inquiry. These include:</p>
             <ul>
-              <li>modify or copy the materials;</li>
-              <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-              <li>attempt to decompile or reverse engineer any software contained on Springer Capital's website;</li>
-              <li>remove any copyright or other proprietary notations from the materials; or</li>
-              <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+              <li><strong>Transactional Communications:</strong> Direct responses to your specific questions or service requests. These do not require marketing opt-in consent.</li>
+              <li><strong>Marketing Communications:</strong> If you explicitly opt in, you may receive updates, market insights, and news regarding our services. You maintain the right to withdraw this consent to marketing communications at any time by utilizing the unsubscribe mechanism provided in every promotional email.</li>
             </ul>
 
-            <h3>3. Disclaimer</h3>
-            <p>The materials on Springer Capital's website are provided on an 'as is' basis. Springer Capital makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-            <p>Further, Springer Capital does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+            <h3>4. Intellectual Property Rights</h3>
+            <p>All content displayed on this website—including text, editorial materials, images, architectural layouts, logos, branding, and design elements—is the exclusive intellectual property of <strong>Springer Capital LLC</strong> and is protected by applicable international copyright and trademark laws. Visitors are granted a limited license to view the materials temporarily for personal, non-commercial use.</p>
 
-            <h3>4. Limitations</h3>
-            <p>In no event shall Springer Capital or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Springer Capital's website, even if Springer Capital or a Springer Capital authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+            <h3>5. Acceptable Use and Prohibited Activities</h3>
+            <p>When interacting with our website and our contact systems, you agree strictly to the following acceptable use boundaries:</p>
+            <ul>
+              <li>No automated scraping, data mining, or malicious penetration testing.</li>
+              <li>No use of our integrated contact forms to distribute spam, solicitations, or unsolicited commercial messaging.</li>
+              <li>No submission of false, fraudulent, or systematically misleading personal information.</li>
+            </ul>
+            <p>We reserve the right to block access or ignore communications arising from prohibited activities, and log malicious traffic for regulatory reporting.</p>
 
-            <h3>5. Governing Law</h3>
-            <p>These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction in which Springer Capital operates, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
+            <h3>6. Limitation of Liability</h3>
+            <p>In no event shall Springer Capital, its directors, or its suppliers be held liable for any damages (including, without limitation, direct, indirect, incidental, or consequential damages resulting from lost data, interrupted business, or lost profits) arising from the use or inability to access the materials on this website. Our operations are provided on an "as is" and "as available" basis without implied warranties.</p>
+
+            <h3>7. Governing Law and Jurisdiction</h3>
+            <p>These Terms, and any disputes arising from your use of the website or our services, are governed exclusively by and construed in accordance with the <strong>laws of the State of Illinois, United States of America</strong>, without regard to its conflict of law principles.</p>
+
+            <h3>8. Dispute Resolution</h3>
+            <p>Any disputes arising out of these Terms shall first be addressed through a formal, good-faith negotiation period lasting no less than thirty (30) days. If a resolution cannot be reached, the dispute shall be resolved via binding arbitration or exclusive litigation strictly within the state and federal courts located in <strong>Cook County, Illinois</strong>. You irrevocably submit to the exclusive jurisdiction and venue of such courts.</p>
+
           </div>
         </div>
       </section>
