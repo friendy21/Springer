@@ -19,9 +19,7 @@ export default function PrivacyPage() {
 
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-zinc max-w-none prose-headings:font-serif prose-headings:font-bold prose-headings:text-zinc-900 prose-h3:text-[1.35rem] prose-h3:mt-12 prose-h3:mb-6 border-l-[3px] border-brand-green/20 pl-8 prose-p:text-zinc-500 prose-p:leading-[1.85] prose-p:mb-6 prose-li:text-zinc-500 prose-li:leading-[1.85] marker:text-brand-green prose-a:text-brand-green hover:prose-a:text-brand-green-light prose-a:transition-colors">
-            
-            <p><strong>Effective Date:</strong> April 2026 | <strong>Last Updated:</strong> April 2026</p>
+          <div className="prose prose-lg prose-zinc max-w-none prose-headings:font-serif prose-headings:font-medium prose-headings:text-zinc-900 prose-h3:text-2xl prose-h3:mt-14 prose-h3:mb-6 prose-h3:tracking-tight prose-p:text-zinc-600 prose-p:leading-relaxed prose-p:mb-8 prose-li:text-zinc-600 prose-li:leading-relaxed marker:text-brand-green prose-a:text-brand-green hover:prose-a:text-brand-green-light prose-a:transition-colors prose-strong:text-zinc-900 prose-strong:font-medium">
 
             <h3>1. Identity of the Data Controller</h3>
             <p><strong>Springer Capital LLC</strong> ("we," "our," or "us") is the data controller responsible for your personal information. We are registered in the State of Illinois, USA.</p>
