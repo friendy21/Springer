@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Layers, Users, Store, TrendingUp, Building2, CircleCheck as CheckCircle2, ArrowUpRight } from 'lucide-react';
 
+export const metadata = { title: 'Mixed Use', description: 'Mixed use community investments' };
+
+
 const stats = [
   { value: 'Live', label: 'Work · Play', sub: 'The integrated lifestyle' },
   { value: '2x', label: 'Foot Traffic', sub: 'vs. single-use assets' },

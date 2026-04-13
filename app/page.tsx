@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, TrendingUp, ShieldCheck, Handshake, MapPin, Globe, Building2, Warehouse, Hotel, Layers, TreePine, ChevronDown, DollarSign, Clock, Target, ChartBar as BarChart2, ExternalLink } from 'lucide-react';
 import Tilt3D from '@/components/Tilt3D';
 import AnimatedCounter from '@/components/AnimatedCounter';
@@ -96,7 +97,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('/images/sh.png')" }} />
           <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/55 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent text-center" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
         </div>
         <div className="absolute inset-0 z-[1] grid-pattern opacity-[0.035] pointer-events-none" />
 
@@ -386,7 +387,7 @@ export default function Home() {
                 ].map((m) => (
                   <Link href="/team" key={m.name} className={`group flex-1 ${m.offset}`}>
                     <div className="relative overflow-hidden rounded-[2rem] aspect-[4/5] bg-zinc-100 shadow-[0_24px_50px_rgba(0,0,0,0.08)] border-[6px] md:border-[10px] border-white hover:border-transparent ring-2 ring-transparent ring-offset-0 group-hover:shadow-[0_32px_80px_rgba(42,140,45,0.15)] transition-all duration-500">
-                      <img src={m.img} alt={m.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                      <Image src={m.img} alt={m.name} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                         <div className="translate-y-2 group-hover:translate-y-0 transition-transform duration-300">

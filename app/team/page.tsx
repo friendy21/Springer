@@ -1,6 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, MapPin, Globe, Briefcase, Building2, Users } from 'lucide-react';
+
+export const metadata = { title: 'Leadership', description: 'Meet the Springer Capital management team' };
+
 
 const members = [
   {
@@ -34,7 +38,7 @@ const members = [
       { label: 'Previous', value: 'Capital Fundraising, Dothink Group' },
     ],
     bio: [
-      'Isaac Rosenthal, operating director of Greentree is responsible for investor relations, corporate strategy, internal SOPs and IT. Isaac is a serial entrepreneur who started a real estate leasing and management company Link People at the age of 23. Link People had 300 share flat apartments with 1500 tenants under management rented to young expat professionals in downtown Shanghai. In 2016, Link People was sold to Dothink Group, a top 50, Hong Kong listed Chinese real estate developer. Since 2017, Isaac, focused on capital fundraising and real estate acquisition projects for Dothink before joining Springer Capital.',
+      'Isaac Rosenthal, operating director of Springer Capital is responsible for investor relations, corporate strategy, internal SOPs and IT. Isaac is a serial entrepreneur who started a real estate leasing and management company Link People at the age of 23. Link People had 300 share flat apartments with 1500 tenants under management rented to young expat professionals in downtown Shanghai. In 2016, Link People was sold to Dothink Group, a top 50, Hong Kong listed Chinese real estate developer. Since 2017, Isaac, focused on capital fundraising and real estate acquisition projects for Dothink before joining Springer Capital.',
     ],
     imagePosition: 'object-top',
   },

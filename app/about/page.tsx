@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Globe, TrendingUp, Handshake, ShieldCheck, ChartBar as BarChart3, CircleCheck as CheckCircle2, MapPin, Users, Award, Zap } from 'lucide-react';
 
+export const metadata = { title: 'About Us', description: 'About Springer Capital global operations' };
+
+
 const stats = [
   { value: '$2M–$20M', label: 'Target Equity Range', sub: 'Per investment' },
   { value: '3–5 Yr', label: 'Holding Periods', sub: 'Typical exit horizon' },
@@ -131,7 +134,7 @@ export default function AboutPage() {
 
               <div className="mt-8 p-6 bg-zinc-900 rounded-2xl border border-zinc-800">
                 <p className="text-zinc-400 text-sm leading-relaxed italic">
-                  "We leverage our breadth of global real estate investment experience with sponsors and our access to capital sources looking for yield, growth, and success."
+                  &quot;We leverage our breadth of global real estate investment experience with sponsors and our access to capital sources looking for yield, growth, and success.&quot;
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <span className="w-8 h-px bg-brand-green" />

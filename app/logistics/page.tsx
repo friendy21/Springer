@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Warehouse, Package, TrendingUp, Globe, Zap, CircleCheck as CheckCircle2, ArrowUpRight } from 'lucide-react';
 
+export const metadata = { title: 'Logistics', description: 'Industrial and logistics asset investments' };
+
+
 const stats = [
   { value: '25%', label: 'E-commerce Growth', sub: 'Post-COVID acceleration' },
   { value: '2%', label: 'Vacancy Rate', sub: 'Historic lows globally' },

@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Building2, TrendingUp, Users, ChartBar as BarChart3, Layers, CircleCheck as CheckCircle2, ArrowUpRight } from 'lucide-react';
 
+export const metadata = { title: 'Multi Family', description: 'Multi family real estate investments' };
+
+
 const stats = [
   { value: '#1', label: 'Asset Class', sub: 'Nationally ranked investment' },
   { value: '$2T+', label: 'Market Size', sub: 'US multifamily sector' },

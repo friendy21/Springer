@@ -1,5 +1,8 @@
 import React from 'react';
 
+export const metadata = { title: 'Privacy Policy', description: 'Privacy Policy' };
+
+
 export default function PrivacyPage() {
   return (
     <>
@@ -21,8 +24,10 @@ export default function PrivacyPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg prose-zinc max-w-none prose-headings:font-serif prose-headings:font-medium prose-headings:text-zinc-900 prose-h3:text-2xl prose-h3:mt-14 prose-h3:mb-6 prose-h3:tracking-tight prose-p:text-zinc-600 prose-p:leading-relaxed prose-p:mb-8 prose-li:text-zinc-600 prose-li:leading-relaxed marker:text-brand-green prose-a:text-brand-green hover:prose-a:text-brand-green-light prose-a:transition-colors prose-strong:text-zinc-900 prose-strong:font-medium">
 
+            <p className="text-sm font-semibold tracking-wide text-zinc-500 mb-8 border-b border-zinc-100 pb-4">Effective Date: April 13, 2026</p>
+
             <h3>1. Identity of the Data Controller</h3>
-            <p><strong>Springer Capital LLC</strong> ("we," "our," or "us") is the data controller responsible for your personal information. We are registered in the State of Illinois, USA.</p>
+            <p><strong>Springer Capital LLC</strong> (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is the data controller responsible for your personal information. We are registered in the State of Illinois, USA.</p>
             <ul className="space-y-4 my-6">
               <li><strong>Physical Address</strong> &mdash; 430 Beverly Drive, Wilmette, Illinois 60091</li>
               <li><strong>Primary Privacy Contact</strong> &mdash; <a href="mailto:contact@springer.capital">contact@springer.capital</a></li>
@@ -77,7 +82,7 @@ export default function PrivacyPage() {
             <ul className="space-y-4 my-6">
               <li><strong>Right to Access</strong> &mdash; Request a copy of your data.</li>
               <li><strong>Right to Rectification</strong> &mdash; Request correction of inaccurate data.</li>
-              <li><strong>Right to Erasure</strong> &mdash; Request the deletion of your data ("Right to be Forgotten").</li>
+              <li><strong>Right to Erasure</strong> &mdash; Request the deletion of your data (&quot;Right to be Forgotten&quot;).</li>
               <li><strong>Right to Restrict / Object</strong> &mdash; Object to processing based on legitimate interest.</li>
               <li><strong>Right to Data Portability</strong> &mdash; Obtain your data in a portable format.</li>
               <li><strong>Right to Withdraw Consent</strong> &mdash; Withdraw consent for marketing emails at any time.</li>
@@ -90,6 +95,42 @@ export default function PrivacyPage() {
             <h3>10. Policy Updates and Complaints</h3>
             <p>We will notify you of any material changes to this Privacy Policy by updating the Last Updated date atop this page, and for significant changes, via a prominent notice on our website.</p>
             <p>If you have any questions or wish to file a privacy complaint, please email <a href="mailto:contact@springer.capital">contact@springer.capital</a>. We respond to all privacy inquiries within <strong>30 days</strong>. You also maintain the right to lodge a complaint with your local supervisory authority or Data Protection Authority.</p>
+
+            <h3>11. SMS Communications</h3>
+            <p>
+              Where you have explicitly opted in via our contact form, Springer Capital LLC 
+              may send SMS text messages to your mobile phone number.
+            </p>
+            <ul className="space-y-4 my-6">
+              <li>
+                <strong>No Third-Party Sharing</strong> &mdash; Mobile phone numbers and 
+                SMS opt-in data will never be shared, sold, or transferred to any third 
+                parties or affiliates for marketing or promotional purposes. All other use 
+                case categories exclude text messaging originator opt-in data and consent; 
+                this information will not be shared with any third parties.
+              </li>
+              <li>
+                <strong>Service Providers</strong> &mdash; We use Twilio Inc. solely to 
+                transmit SMS messages on our behalf, under strict data confidentiality.
+              </li>
+              <li>
+                <strong>Opt-Out</strong> &mdash; Reply STOP, QUIT, CANCEL, UNSUBSCRIBE, 
+                or END to any SMS to stop all messages. You will receive one final 
+                confirmation. Reply START to re-subscribe.
+              </li>
+              <li>
+                <strong>Help</strong> &mdash; Reply HELP for assistance or contact 
+                contact@springer.capital.
+              </li>
+              <li>
+                <strong>Message Frequency</strong> &mdash; Varies based on inquiry. 
+                Marketing updates: no more than 2&ndash;4 per month.
+              </li>
+              <li>
+                <strong>Rates</strong> &mdash; Message and data rates may apply. 
+                Contact your carrier for details.
+              </li>
+            </ul>
 
           </div>
         </div>

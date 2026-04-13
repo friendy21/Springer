@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, TreePine, DollarSign, Target, Network, CircleCheck as CheckCircle2, ArrowUpRight, Map } from 'lucide-react';
 
+export const metadata = { title: 'Development Land', description: 'Development land investment opportunities' };
+
+
 const stats = [
   { value: 'Lower Cost', label: 'Than Developed Land', sub: 'Minimal insurance & maintenance' },
   { value: 'Less', label: 'Competition', sub: 'Overlooked asset class' },

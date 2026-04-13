@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Hotel, TrendingUp, ShieldCheck, Star, Zap, CircleCheck as CheckCircle2, ArrowUpRight } from 'lucide-react';
 
+export const metadata = { title: 'Hospitality', description: 'Hospitality and resort asset investments' };
+
+
 const stats = [
   { value: 'High Yield', label: 'Operating Returns', sub: 'Cash flow driven income' },
   { value: 'Tax', label: 'Efficiency', sub: 'Depreciation & equity growth' },

@@ -9,8 +9,8 @@ export default function CookieBanner() {
   const [animating, setAnimating] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
 
-  // Default analytics toggled on in the preferences view
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
+  // Default analytics toggled off in the preferences view for compliance
+  const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
 
   useEffect(() => {
     const accepted = localStorage.getItem('sc_cookie_consent');

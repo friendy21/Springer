@@ -4,6 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Newspaper } from 'lucide-react';
 
+
+
 export default function NewsPage() {
   return (
     <>
@@ -37,7 +39,7 @@ export default function NewsPage() {
             </div>
             <h2 className="text-2xl md:text-3xl font-bold font-serif text-zinc-900 mb-6 tracking-tight">Market Updates & Announcements</h2>
             <p className="text-zinc-600 text-lg leading-relaxed max-w-2xl mx-auto">
-              It is our job to be a resource of information for our clients. Please check back frequently as we will have real estate news updates both for ERG Commercial Real Estate, and the marketplace in general.
+              It is our job to be a resource of information for our clients. Please check back frequently as we will have real estate news updates both for Springer Capital Commercial Real Estate, and the marketplace in general.
             </p>
             
             <div className="mt-10 pt-10 border-t border-zinc-200">

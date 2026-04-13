@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Send, Clock, Globe } from 'lucide-react';
 
+export const metadata = { title: 'Contact Us', description: 'Get in touch with Springer Capital' };
+
+
 export default function ContactPage() {
   return (
     <>
@@ -21,7 +24,7 @@ export default function ContactPage() {
             Contact <span className="text-brand-green">Us</span>
           </h1>
           <p className="hero-text-reveal-3 text-xl text-zinc-300/80 font-light max-w-xl leading-relaxed">
-            We'd love to hear from you. Reach out and we'll respond promptly.
+            We&apos;d love to hear from you. Reach out and we&apos;ll respond promptly.
           </p>
         </div>
       </section>
@@ -41,7 +44,7 @@ export default function ContactPage() {
                 <span className="text-brand-green">C</span>ontact the Springer Capital Team
               </h2>
               <p className="text-lg text-zinc-600 mb-12 leading-relaxed">
-                We'd love to hear from you! If you want to connect with us, please fill out the contact form below.
+                We&apos;d love to hear from you! If you want to connect with us, please fill out the contact form below.
               </p>
 
               <div className="space-y-4 mb-12">
@@ -98,9 +101,9 @@ export default function ContactPage() {
                 <div className="relative bg-white rounded-2xl shadow-[0_12px_48px_rgba(0,0,0,0.10)] p-8 md:p-12">
                   <div className="h-1 bg-gradient-to-r from-brand-green via-brand-green-light to-brand-green rounded-full mb-8" />
                   <h2 className="text-2xl font-bold text-zinc-900 mb-2 font-serif text-center tracking-tight">How May We Help You?</h2>
-                  <p className="text-center text-zinc-400 text-sm mb-8">Fill in your details and we'll be in touch.</p>
+                  <p className="text-center text-zinc-400 text-sm mb-8">Fill in your details and we&apos;ll be in touch.</p>
 
-                  <form action="/thankyou" method="POST" className="space-y-5">
+                  <form action="/api/contact" method="POST" className="space-y-5">
                     {[
                       { label: 'Full Name', name: 'name', type: 'text', placeholder: 'Enter your name', title: 'Please enter your name (at least 2 characters)' },
                       { label: 'Email Address', name: 'email', type: 'email', placeholder: 'Enter your email', title: 'Please enter a valid email address' },
@@ -118,6 +121,28 @@ export default function ContactPage() {
                         />
                       </div>
                     ))}
+
+                    {/* SMS Consent — required for A2P 10DLC — must be optional, never pre-checked */}
+                    <div className="flex items-start gap-3 p-4 bg-zinc-50 border border-zinc-200 rounded-xl">
+                      <input
+                        type="checkbox"
+                        id="sms_consent"
+                        name="sms_consent"
+                        // NO "required" attribute — SMS consent cannot block form submission
+                        className="mt-0.5 w-4 h-4 rounded border-zinc-300 accent-[#2a8c2d] flex-shrink-0 cursor-pointer"
+                      />
+                      <label htmlFor="sms_consent" className="text-xs text-zinc-600 leading-relaxed cursor-pointer">
+                        By providing your phone number and checking this box, you consent to receive 
+                        SMS text messages from Springer Capital LLC regarding your inquiry. 
+                        Message frequency may vary. Message &amp; data rates may apply. 
+                        Reply STOP to opt out. Reply HELP for assistance. 
+                        See our{' '}
+                        <Link href="/privacy" className="text-brand-green underline underline-offset-2 hover:text-brand-green-light">
+                          Privacy Policy
+                        </Link>.{' '}
+                        <span className="text-zinc-400">(Optional)</span>
+                      </label>
+                    </div>
 
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-400 mb-2">Your Message</label>
@@ -173,7 +198,7 @@ export default function ContactPage() {
                       We do not sell or share your personal data with third parties for their marketing purposes.
                     </p>
 
-                    <input type="hidden" name="_next" value="https://www.greentree.group/Springer/thankyou.html" />
+                    <input type="hidden" name="_next" value="https://springer.capital/thankyou" />
                     <input name="_formsubmit_id" type="text" style={{ display: 'none' }} />
 
                     <button type="submit" className="btn-primary w-full justify-center group py-4">

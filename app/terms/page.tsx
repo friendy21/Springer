@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 
+export const metadata = { title: 'Terms of Service', description: 'Terms of Service' };
+
+
 export default function TermsPage() {
   return (
     <>
@@ -48,13 +51,37 @@ export default function TermsPage() {
             <p>We reserve the right to block access or ignore communications arising from prohibited activities, and log malicious traffic for regulatory reporting.</p>
 
             <h3>6. Limitation of Liability</h3>
-            <p>In no event shall Springer Capital, its directors, or its suppliers be held liable for any damages (including, without limitation, direct, indirect, incidental, or consequential damages resulting from lost data, interrupted business, or lost profits) arising from the use or inability to access the materials on this website. Our operations are provided on an "as is" and "as available" basis without implied warranties.</p>
+            <p>In no event shall Springer Capital, its directors, or its suppliers be held liable for any damages (including, without limitation, direct, indirect, incidental, or consequential damages resulting from lost data, interrupted business, or lost profits) arising from the use or inability to access the materials on this website. Our operations are provided on an &quot;as is&quot; and &quot;as available&quot; basis without implied warranties.</p>
 
             <h3>7. Governing Law and Jurisdiction</h3>
             <p>These Terms, and any disputes arising from your use of the website or our services, are governed exclusively by and construed in accordance with the <strong>laws of the State of Illinois, United States of America</strong>, without regard to its conflict of law principles.</p>
 
             <h3>8. Dispute Resolution</h3>
             <p>Any disputes arising out of these Terms shall first be addressed through a formal, good-faith negotiation period lasting no less than thirty (30) days. If a resolution cannot be reached, the dispute shall be resolved via binding arbitration or exclusive litigation strictly within the state and federal courts located in <strong>Cook County, Illinois</strong>. You irrevocably submit to the exclusive jurisdiction and venue of such courts.</p>
+
+            <h3>9. SMS Communications Program</h3>
+            <p>
+              By opting into SMS communications from Springer Capital LLC, you agree to 
+              the following terms:
+            </p>
+            <ul className="space-y-4 my-6">
+              <li><strong>Program</strong> &mdash; Springer Capital LLC sends SMS to 
+              respond to inquiries and, where separately consented, to share real estate 
+              advisory updates.</li>
+              <li><strong>Frequency</strong> &mdash; Message frequency varies. Marketing 
+              updates: no more than 2&ndash;4 per month.</li>
+              <li><strong>Rates</strong> &mdash; Message and data rates may apply.</li>
+              <li><strong>Opt-Out</strong> &mdash; Reply STOP, QUIT, CANCEL, UNSUBSCRIBE, 
+              or END at any time. One confirmation message will be sent.</li>
+              <li><strong>Opt-In</strong> &mdash; Reply START or YES to re-subscribe.</li>
+              <li><strong>Help</strong> &mdash; Reply HELP or contact 
+              contact@springer.capital or +1 224 216 3685.</li>
+              <li><strong>Carrier Liability</strong> &mdash; Carriers are not liable for 
+              delayed or undelivered messages.</li>
+              <li><strong>Privacy</strong> &mdash; Mobile numbers are not shared with 
+              third parties for marketing. See our{' '}
+              <Link href="/privacy">Privacy Policy</Link>.</li>
+            </ul>
 
           </div>
         </div>

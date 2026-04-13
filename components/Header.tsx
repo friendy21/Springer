@@ -41,10 +41,25 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  useEffect(() => {
+  const [prevPathname, setPrevPathname] = useState(pathname);
+
+  // Derive state to avoid cascading re-renders on route change
+  if (pathname !== prevPathname) {
     setIsOpen(false);
     setActiveDropdown(null);
-  }, [pathname]);
+    setPrevPathname(pathname);
+  }
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setActiveDropdown(null);
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const isActive = (href: string) => pathname === href;
 

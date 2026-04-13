@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Briefcase, Globe, Users, TrendingUp, Mail } from 'lucide-react';
 
+export const metadata = { title: 'Careers', description: 'Join the Springer Capital team' };
+
+
 export default function CareerPage() {
   return (
     <>
@@ -69,13 +72,13 @@ export default function CareerPage() {
               </div>
               <div className="h-0.5 w-12 bg-gradient-to-r from-brand-green to-brand-green-light rounded-full mx-auto mb-6" />
               <p className="text-zinc-500 italic text-lg leading-relaxed max-w-md mx-auto">
-                We currently don't have any openings available. Check back soon for future opportunities, or reach out to our team directly.
+                We currently don&apos;t have any openings available. Check back soon for future opportunities, or reach out to our team directly.
               </p>
             </div>
           </div>
 
           <div className="mt-12 reveal stagger-2 text-center">
-            <p className="text-zinc-500 text-sm mb-6">Interested in joining us in the future? Send us your resume and we'll keep you in mind.</p>
+            <p className="text-zinc-500 text-sm mb-6">Interested in joining us in the future? Send us your resume and we&apos;ll keep you in mind.</p>
             <Link href="/contact" className="btn-outline group inline-flex">
               <Mail className="w-4 h-4 mr-2" />
               Contact Us Openly
