@@ -30,9 +30,9 @@ export default function TermsPage() {
 
             <h3>3. Electronic Communications</h3>
             <p>By voluntarily submitting our contact forms, you expressly consent to receive electronic communications from Springer Capital regarding your inquiry. These include:</p>
-            <ul>
-              <li><strong>Transactional Communications:</strong> Direct responses to your specific questions or service requests. These do not require marketing opt-in consent.</li>
-              <li><strong>Marketing Communications:</strong> If you explicitly opt in, you may receive updates, market insights, and news regarding our services. You maintain the right to withdraw this consent to marketing communications at any time by utilizing the unsubscribe mechanism provided in every promotional email.</li>
+            <ul className="space-y-4 my-6">
+              <li><strong>Transactional Communications</strong> &mdash; Direct responses to your specific questions or service requests. These do not require marketing opt-in consent.</li>
+              <li><strong>Marketing Communications</strong> &mdash; If you explicitly opt in, you may receive updates, market insights, and news regarding our services. You maintain the right to withdraw this consent to marketing communications at any time by utilizing the unsubscribe mechanism provided in every promotional email.</li>
             </ul>
 
             <h3>4. Intellectual Property Rights</h3>
@@ -40,7 +40,7 @@ export default function TermsPage() {
 
             <h3>5. Acceptable Use and Prohibited Activities</h3>
             <p>When interacting with our website and our contact systems, you agree strictly to the following acceptable use boundaries:</p>
-            <ul>
+            <ul className="space-y-4 my-6">
               <li>No automated scraping, data mining, or malicious penetration testing.</li>
               <li>No use of our integrated contact forms to distribute spam, solicitations, or unsolicited commercial messaging.</li>
               <li>No submission of false, fraudulent, or systematically misleading personal information.</li>
